@@ -1,0 +1,119 @@
+body {
+    min-height: 100%;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.container {
+    margin: 0px;
+    display: grid;
+    height: 750px;
+    min-width: 1vw;
+    box-sizing: border-box;
+    grid-template-rows: 90px 1fr
+}
+
+.header {
+    display: grid;
+    grid-auto-flow: column;
+    background-color: white;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+    padding: 25px 50px;
+    box-sizing: border-box;
+    align-content: center;
+}
+
+.header p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.header button {
+    width: 70px;
+    justify-self: end;
+    height: 70%;
+    align-self: center;
+    background-color: rgb(168, 204, 168);
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(214, 207, 208);
+    gap: 15px;
+    padding: 10px;
+}
+
+.book {
+    background-color: white;
+    height: 275px;
+    display: grid;
+    padding: 25px;
+    box-shadow: 2px 2px 5px darkgray;
+    grid-template-areas:
+        "title remove"
+        "author author"
+        "pages pages"
+        "read read";
+    grid-template-columns: 1fr 18px;
+    gap: 10px
+}
+
+.book p {
+    margin: 0px;
+}
+
+.book .title {
+    font-weight: bold;
+    font-size: 18px;
+    grid-area: title
+}
+
+.book .author {
+    grid-area: author
+}
+
+.book .pages {
+    color: grey;
+    grid-area: pages
+}
+
+.book .removeButton {
+    grid-area: remove;
+    height: 18px;
+    background-color: rgb(247, 190, 190);
+    background-image: url("delete.png");
+    background-position: center;
+    background-size: 90%;
+}
+
+.book .removeButton img {
+    height: 15px;
+    width: 15px
+}
+
+.book .readButton {
+    grid-area: read;
+}
+
+.book .read {
+    background-color: rgb(181, 219, 181)
+}
+
+form {
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+
+form input {
+    height: 20px
+}
+
+form button {
+    grid-area: 5 / 2 / 6 / 3
+}
